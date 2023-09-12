@@ -1,0 +1,31 @@
+{
+  "name": "typid",
+  "version": "0.0.0",
+  "description": "Simple typed IDs with 80 bits of randomness and short, copyable encoding.",
+  "type": "module",
+  "main": "./build/index.js",
+  "exports": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "README.md",
+    "build/"
+  ],
+  "scripts": {
+    "start": "npm test",
+    "prettier": "prettier --write .",
+    "pretest": "npm run build",
+    "test": "node build/test/basic.js",
+    "build": "tsc --build",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Olivier Lalonde <o@syskall.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.49.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  }
+}
